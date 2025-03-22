@@ -17,4 +17,14 @@ public class Direccion {
     private String ciudad;
     private String codigo_postal;
     private String estado;
+
+    public Direccion(DatosDireccion datosDireccion) {
+        this.calle = datosDireccion.calle();
+        this.numero = datosDireccion.numero();
+        this.complemento = datosDireccion.complemento();
+        this.barrio = datosDireccion.barrio();
+        this.ciudad = datosDireccion.ciudad();
+        this.codigo_postal = datosDireccion.codigo_postal();
+        this.estado = datosDireccion.estado();
+    }
 }
