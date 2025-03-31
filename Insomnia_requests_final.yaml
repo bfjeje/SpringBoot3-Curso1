@@ -1,0 +1,128 @@
+type: collection.insomnia.rest/5.0
+name: Requests
+meta:
+  id: wrk_dd2b68a742034f2591eb1957d193d569
+  created: 1742065362283
+  modified: 1742065362283
+collection:
+  - url: http://localhost:8080/medicos
+    name: Registro de médico
+    meta:
+      id: req_5d62257f0b5243b1935b0a86e788d51b
+      created: 1742065386213
+      modified: 1742761032215
+      isPrivate: false
+      sortKey: -1742065386213
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "nombre" :  "Andres Jorge",
+        	"email" : "andres.jorge@voll.med",
+        	"documento" : "88877766",
+        	"telefono" : "11222444569",
+        	"especialidad" : "CARDIOLOGIA",
+          "direccion" : {
+            "calle" : "calle C",
+            "barrio" : "barrio2",
+            "codigo_postal" : "1234",
+            "ciudad" : "San Rafael",
+            "estado" : "Mendoza"
+        	}
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/medicos
+    name: Lista de medicos
+    meta:
+      id: req_8495535681f642b6985581e180a8e89f
+      created: 1742771175792
+      modified: 1742942554803
+      isPrivate: false
+      sortKey: -1742771175792
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/medicos
+    name: Actualizar medico
+    meta:
+      id: req_cac2b29bf7f249c7b35b26f38f5b4712
+      created: 1743037020790
+      modified: 1743111901234
+      isPrivate: false
+      sortKey: -1743037020790
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 3,
+        	"nombre": "Juan Carlos"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/medicos/4
+    name: Eliminar medico
+    meta:
+      id: req_0803aab9157b4997be855ab9a692a4e7
+      created: 1743200408795
+      modified: 1743369937894
+      isPrivate: false
+      sortKey: -1743200408795
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_ab0796799abe74c8831c8e18c69d671b91137997
+    created: 1742065362292
+    modified: 1742065362292
+environments:
+  name: Base Environment
+  meta:
+    id: env_ab0796799abe74c8831c8e18c69d671b91137997
+    created: 1742065362287
+    modified: 1742065362287
+    isPrivate: false
